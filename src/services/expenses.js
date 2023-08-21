@@ -1,3 +1,5 @@
+import { ActionCreators } from '../app/expensesReducer';
+
 export const GetExpenses = async (dispatch) => {
     try {
         // api call
@@ -7,6 +9,8 @@ export const GetExpenses = async (dispatch) => {
             {id: 3, description: 'Gas', amount: 32.76},
             {id: 4, description: 'Loan', amount: 120.37},
         ];
+
+        dispatch(ActionCreators.setExpenses(expenses));
     } catch {
         console.log("Error");
         dispatch(setExpensesError());
