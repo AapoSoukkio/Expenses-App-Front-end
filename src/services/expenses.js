@@ -13,6 +13,6 @@ export const GetExpenses = async (dispatch) => {
         dispatch(ActionCreators.setExpenses(expenses));
     } catch {
         console.log("Error");
-        dispatch(setExpensesError());
+        // dispatch(setExpensesError());
     }
 }
